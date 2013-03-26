@@ -4,8 +4,15 @@ from sklearn import cross_validation
 
 
 def weights(binary, ordering):
-    print ordering
-    print binary
+    index = 0
+    curr = binary[ordering[index]]
+    while index < len(ordering)-1:
+        if curr == binary[ordering[index + 1]]:
+            index += 1
+            curr == binary[ordering[index]]
+        else:
+            break
+    print index
 
 def canary():
 #    y, x = svm_read_problem('libsvm/heart_scale')
